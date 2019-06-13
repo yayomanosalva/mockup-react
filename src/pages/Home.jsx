@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../components/header';
-import Aside from '../components/aside'
+import Aside from '../components/aside/aside'
 import Content from '../components/content'
 
 const HelloWorld = ({name}) => (
