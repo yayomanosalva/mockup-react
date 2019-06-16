@@ -3,12 +3,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faCertificate,
     faCalendar,
-    faHeart, faLightbulb
+    faHeart, faLightbulb, faSearch
 } from "@fortawesome/free-solid-svg-icons";
-import "./aside.css";
 import logo from "../../img/logo.png"
 import ToogleButton from '../aside/ToggleButton'
 import Input from '../aside/input'
+import Search from '../search'
 
 export default class SideBar extends Component {
     render() {
@@ -16,7 +16,7 @@ export default class SideBar extends Component {
             <aside className="main-sidebar">
                 <section>
                     <div className="sidebar center">
-                        <img src={logo} />  
+                        <img src={logo} />
                     </div>
                 </section>
                 <section className="sidebar">
@@ -38,7 +38,7 @@ export default class SideBar extends Component {
                                 <div className="ico-w">
                                     <FontAwesomeIcon icon={faCertificate} size="3x" />
                                 </div>
-                                <ToogleButton message="x"/>
+                                <ToogleButton message="x" />
                             </div>
                             <div
                                 href="#e"
@@ -55,12 +55,14 @@ export default class SideBar extends Component {
                                 <div className="ico-w">
                                     <FontAwesomeIcon icon={faHeart} size="3x" />
                                 </div>
-                                <ToogleButton message="z    " />
+                                <ToogleButton message="z" />
                             </div>
                             <hr width="80%" />
-                            <div className="center form-group">
-                                <label for="usr">Status</label>
-                                <Input />
+                            <Search name="Status"/>
+                            <div className="center list-group-item list-group-item-action">
+                                <div className="form-group">
+                                    <input type="text" className="form-control" id="DELIVERED" placeholder="DELIVERED" />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -155,6 +157,7 @@ export default class SideBar extends Component {
                         }
                         .list-group-item {
                             background-color: transparent;
+                            padding: 0.3rem 1.25rem;
                             border: none;
                         }
                         .border-right {
@@ -167,6 +170,46 @@ export default class SideBar extends Component {
                         }
                         .center {
                             text-align: center;
+                        }
+                        body {
+                            padding: 1rem;
+                        }
+
+                        .dropdown-menu {
+                            margin-top: 0.75rem;
+                        }
+                        ::-webkit-input-placeholder {
+                        text-align: center;
+                        }
+
+                        :-moz-placeholder { /* Firefox 18- */
+                        text-align: center;  
+                        }
+
+                        ::-moz-placeholder {  /* Firefox 19+ */
+                        text-align: center;  
+                        }
+
+                        :-ms-input-placeholder {  
+                        text-align: center; 
+                        }
+
+                        .Search::placeholder {
+                        color: #cacaca;
+                        font-size: 1.2em;
+                        font-style: italic;
+                        }
+
+                        .Search{
+                            color:#cacaca;
+                            border: 3px solid #cacaca;
+                        }
+                        .SearchIco {
+                            color: #cacaca;
+                            font-size: 17px;
+                            position: absolute;
+                            margin-top: 40px;
+                            left: 40px;
                         }
                     `}
                 </style>

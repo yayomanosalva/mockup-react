@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 export default class Content extends Component {
     render(){
         return (
-            <div className="content-wrapper">
+            <div className="content-wrapper col-md-9">
                 <section className="content-header">
                     <div className="row">
                         <div className="col-md-12">

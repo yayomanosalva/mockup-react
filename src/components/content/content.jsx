@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import Search from '../search'
 
 export default class Content extends Component {
     render() {
@@ -6,45 +9,53 @@ export default class Content extends Component {
             <div className="main">
                 <section className="content-header">
                     <div className="row">
-                        <div className="col-md-12">
+                        <div className="col-md-2">
                             <div className="box">
-                                <div className="box-header with-border">
-                                    <h3 className="box-title">Monthly Recap Report</h3>
-                                </div>
-                                <div className="box-body">
-                                    <div className="row">
-                                        <div className="col-md-8">
-                                            <p className="text-center">
-                                                <strong>This is text</strong>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="box-footer">
-                                    <div className="row">
-                                        <div className="col-sm-3 col-xs-6">
-                                            <div className="description-block border-right">
-                                                <span className="description-percentage text-green"><i className="fa fa-caret-up"></i> 17%</span>
-                                                <h5 className="description-header">$35,210.43</h5>
-                                                <span className="description-text">TOTAL REVENUE</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <button type="button" className="btn btn-warning btn-circle"><FontAwesomeIcon icon={faCheck} size="1x" /></button>
+                            </div>
+                        </div>
+                        <div className="col-md-10">
+                            <div className="col-md-6 inputs">
+                                <Search/>    
                             </div>
                         </div>
                     </div>
                 </section>
                 <style jsx>
                     {`
-						.main {
-              width: calc(100% - 250px);
-              float: right;
-              padding: 30px;
-              position: relative;
-						}
+						.btn-circle.btn-xl {
+                            width: 70px;
+                            height: 70px;
+                            padding: 10px 16px;
+                            border-radius: 35px;
+                            font-size: 24px;
+                            line-height: 1.33;
+                        }
 
-          `}
+                        .inputs {
+                            width: 350px;
+                            height: 90px;
+                            padding: 0;
+                            float: right;
+                        }
+                        
+                        .btn-circle {
+                            width: 30px;
+                            height: 30px;
+                            padding: 6px 0px;
+                            border-radius: 15px;
+                            text-align: center;
+                            font-size: 12px;
+                            line-height: 1.42857;
+                            margin-top: 20px;
+                        }
+                        .main {
+                            width: calc(100% - 200px);
+                            float: right;
+                            padding: 30px;
+                            position: relative;
+                        }
+                    `}
                 </style>
             </div>
         )
