@@ -3,11 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faCertificate,
     faCalendar,
-    faHeart, faLightbulb, faSearch
+    faHeart, faLightbulb
 } from "@fortawesome/free-solid-svg-icons";
 import logo from "../../img/logo.png"
 import ToogleButton from '../aside/ToggleButton'
-import Input from '../aside/input'
 import Search from '../search'
 
 export default class SideBar extends Component {
@@ -16,7 +15,7 @@ export default class SideBar extends Component {
             <aside className="main-sidebar">
                 <section>
                     <div className="sidebar center">
-                        <img src={logo} />
+                        <img src={logo} alt="logo"/>
                     </div>
                 </section>
                 <section className="sidebar">

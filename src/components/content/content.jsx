@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import Search from '../search'
+import List from '../list'
 
 export default class Content extends Component {
     render() {
@@ -20,6 +21,7 @@ export default class Content extends Component {
                             </div>
                         </div>
                     </div>
+                    <List/>
                 </section>
                 <style jsx>
                     {`
