@@ -1,76 +1,82 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    faCertificate,
-    faCalendar,
-    faHeart, faLightbulb
+  faCertificate,
+  faCalendar,
+  faHeart,
+  faLightbulb
 } from "@fortawesome/free-solid-svg-icons";
-import logo from "../../img/logo.png"
-import ToogleButton from '../aside/ToggleButton'
-import Search from '../search'
+import logo from "../../img/logo.png";
+import ToogleButton from "../aside/ToggleButton";
+import Search from "../search";
 
 export default class SideBar extends Component {
-    render() {
-        return (
-            <aside className="main-sidebar">
-                <section>
-                    <div className="sidebar center">
-                        <img src={logo} alt="logo"/>
-                    </div>
-                </section>
-                <section className="sidebar">
-                    <div className=" border-right" id="sidebar-wrapper">
-                        <div className="list-group list-group-flush">
-                            <div
-                                href="#e"
-                                className="center">
-                                <div className="ico-s">
-                                    <FontAwesomeIcon icon={faLightbulb} size="1x" />
-                                </div>
-                                Smart Filters
-                            </div>
-                            <hr width="80%" />
-                            <div
-                                href="#e"
-                                className="list-group-item list-group-item-action ">
-                                <p className="sale">SALE</p>
-                                <div className="ico-w">
-                                    <FontAwesomeIcon icon={faCertificate} size="3x" />
-                                </div>
-                                <ToogleButton message="x" />
-                            </div>
-                            <div
-                                href="#e"
-                                className="list-group-item list-group-item-action ">
-                                <div className="ico-w">
-                                    <FontAwesomeIcon icon={faCalendar} size="3x" />
-                                    <span className="new">23</span>
-                                </div>
-                                <ToogleButton message="y" />
-                            </div>
-                            <div
-                                href="#e"
-                                className="list-group-item list-group-item-action ">
-                                <div className="ico-w">
-                                    <FontAwesomeIcon icon={faHeart} size="3x" />
-                                </div>
-                                <ToogleButton message="z" />
-                            </div>
-                            <hr width="80%" />
-                            <Search name="Status"/>
-                            <div className="center list-group-item list-group-item-action">
-                                <div className="form-group">
-                                    <input type="text" className="form-control" id="DELIVERED" placeholder="DELIVERED" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <style jsx>
-                    {`
+  render() {
+    return (
+      <aside className="main-sidebar">
+        <section>
+          <div className="sidebar center">
+            <img src={logo} alt="logo" />
+          </div>
+        </section>
+        <section className="sidebar">
+          <div className=" border-right" id="sidebar-wrapper">
+            <div className="list-group list-group-flush">
+              <div href="#e" className="center">
+                <div className="ico-s">
+                  <FontAwesomeIcon icon={faLightbulb} size="1x" />
+                </div>
+                Smart Filters
+              </div>
+              <hr width="80%" />
+              <div
+                href="#e"
+                className="list-group-item list-group-item-action "
+              >
+                <div className="ico-w">
+                  <FontAwesomeIcon icon={faCertificate} size="3x" />
+                  <span className="sale">SALE</span>
+                </div>
+                <ToogleButton message="x" />
+              </div>
+              <div
+                href="#e"
+                className="list-group-item list-group-item-action "
+              >
+                <div className="ico-w">
+                  <FontAwesomeIcon icon={faCalendar} size="3x" />
+                  <span className="new">23</span>
+                </div>
+                <ToogleButton message="y" />
+              </div>
+              <div
+                href="#e"
+                className="list-group-item list-group-item-action "
+              >
+                <div className="ico-w">
+                  <FontAwesomeIcon icon={faHeart} size="3x" />
+                </div>
+                <ToogleButton message="z" />
+              </div>
+              <hr width="80%" />
+              <Search name="Status" />
+              <div className="center list-group-item list-group-item-action">
+                <div className="form-group">
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="DELIVERED"
+                    placeholder="DELIVERED"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <style jsx>
+          {`
 						.main-sidebar {
 							height: 100vh;
-							max-width: 200px;
 							position: fixed;
 							top: 0;
 							float: left;
@@ -86,11 +92,10 @@ export default class SideBar extends Component {
                         .sidebar {
                             padding:1.3rem auto;
                         }
-                        p{
-                            -ms-transform: rotate(315deg);
-                            -webkit-transform: rotate(315deg);
+                        .sidebar .sale {
                             color:#ffffff;
-                            margin-left: -15px;
+                            margin-left: -42px;
+                            margin-right: 10px;
                             font-size: small;
                             font-weight: bold;
                         }
@@ -211,8 +216,8 @@ export default class SideBar extends Component {
                             left: 40px;
                         }
                     `}
-                </style>
-            </aside>
-        );
-    }
+        </style>
+      </aside>
+    );
+  }
 }
