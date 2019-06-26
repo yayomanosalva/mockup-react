@@ -25,13 +25,13 @@ const list = [
   },
   {
     uno: "Houston, TX, 33619",
-    dos: <FontAwesomeIcon icon={faCheck} size="1x" className="checkIco ico" />,
+    dos: <FontAwesomeIcon icon={faCheck} size="3x" className="checkIco ico" />,
     tres: "Atlanta, GA, 30123"
   },
   {
-    uno: <FontAwesomeIcon icon={faTruck} size="1x" className="truckIco ico" />,
+    uno: <FontAwesomeIcon icon={faTruck} size="6x" className="truckIco ico" />,
     dos: "$250.00",
-    tres: <FontAwesomeIcon icon={faSquare} size="5x" className="Square ico" />,
+    tres: <FontAwesomeIcon icon={faSquare} className="Square ico" />,
     cautro: (
       <FontAwesomeIcon icon={faEllipsisV} size="5x" className="truckIco ico" />
     )
@@ -57,7 +57,7 @@ export default class List extends Component {
             .secundary {
               background: white;
               width: auto;
-              height: 70px;
+              height: auto;
               padding: 10px 20px;
               border-radius: 20px;
               font-size: 15px;
@@ -87,7 +87,13 @@ export default class List extends Component {
             .checkIco {
               color: #ee8d38;
             }
-            .arrowIco {
+            .secundary p .arrowIco {
+              margin: 0 1rem;
+              text-align: center;
+              overflow: auto;
+              display: flex;
+              justify-content: center;
+              padding-right: 0;
             }
             .truckIco {
             }
@@ -103,6 +109,10 @@ export default class List extends Component {
               padding-left: 0.9em;
               float: right;
               margin-top: -3rem;
+              border-left: 2px solid #cacaca;
+            }
+            .secundary ul li:last-child p {
+              font-size: 2rem;
             }
           `}
         </style>
