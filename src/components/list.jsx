@@ -43,8 +43,8 @@ export default class List extends Component {
     return (
       <div className="secundary">
         <ul>
-          {list.map(item => (
-            <li key={item.uno}>
+          {list.map((item, i) => (
+            <li key={i} value={item}>
               <p>{item.uno}</p>
               <p>{item.dos}</p>
               <p>{item.tres}</p>

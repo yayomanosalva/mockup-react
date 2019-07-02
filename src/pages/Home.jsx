@@ -3,13 +3,13 @@ import React from "react";
 import Aside from "../components/aside/aside";
 import Content from "../components/content/content";
 
-const HelloWorld = ({ name }) => (
+const Home = ({ name }) => (
   <div className="container-fluid">
-    <div class="row">
-      <div class="col-sm-3">
+    <div className="row">
+      <div className="col-sm-3">
         <Aside />
       </div>
-      <div class="col-sm-9">
+      <div className="col-sm-9">
         <Content />
       </div>
     </div>
@@ -23,4 +23,4 @@ const HelloWorld = ({ name }) => (
   </div>
 );
 
-export default HelloWorld;
+export default Home;

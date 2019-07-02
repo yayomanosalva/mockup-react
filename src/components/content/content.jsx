@@ -6,6 +6,20 @@ import List from "../list";
 
 export default class Content extends Component {
   render() {
+    const listado = (
+      <div className="row">
+        <div className="col-sm-1">
+          <Circle />
+        </div>
+        <div className="col-sm-11">
+          <List />
+        </div>
+      </div>
+    );
+    let stars = [];
+    for (let i = 0; i < 3; i++) {
+      stars.push(listado);
+    }
     return (
       <div className="content">
         <div className="row">
@@ -25,16 +39,14 @@ export default class Content extends Component {
           </div>
         </div>
         {/*End Row*/}
-        <div className="row">
-          <div className="col-sm-1">
-            <Circle />
-          </div>
-          <div className="col-sm-11">
-            <List />
-          </div>
-        </div>
+        {stars}
+        {/*End Row*/}
         <style jsx>
           {`
+            .row {
+              margin-top: 1rem;
+              margin-bottom: 1rem;
+            }
             .content {
               padding: 0 20px;
             }

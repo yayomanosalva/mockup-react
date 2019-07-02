@@ -16,7 +16,7 @@ const Header = () => {
         <Switch>
           <ul>
             <li>
-              <NavLink to="/">
+              <NavLink to="/" className="blue">
                 <FontAwesomeIcon icon={faHome} size="1x" />
                 <br />
                 Home
@@ -59,6 +59,11 @@ const Header = () => {
             padding: 30px 5px 0 0;
             position: relative;
             top: 0;
+          }
+
+          .blue {
+            background-color: #193948 !important;
+            color: #fff !important;
           }
 
           /*menu*/
