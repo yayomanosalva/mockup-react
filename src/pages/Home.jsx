@@ -1,23 +1,26 @@
-import React from 'react'
-import Header from '../components/header/header';
-import Aside from '../components/aside/aside'
-import Content from '../components/content/content'
+import React from "react";
 
-const HelloWorld = ({name}) => (
-    
- <div className="container">
-    
-    <Aside />
-    <Header />
-    <Content />
+import Aside from "../components/aside/aside";
+import Content from "../components/content/content";
+
+const Home = ({ name }) => (
+  <div className="container-fluid">
+    <div className="row">
+      <div className="col-sm-3">
+        <Aside />
+      </div>
+      <div className="col-sm-9">
+        <Content />
+      </div>
+    </div>
     <style jsx>
-    {`
-      body {
-         background-color: #e5e5e5;
-      }
-    `}
+      {`
+        body {
+          background-color: #e5e5e5;
+        }
+      `}
     </style>
- </div>
+  </div>
 );
 
-export default HelloWorld;
+export default Home;
